@@ -13,3 +13,4 @@ model_config.json
 model.safetensors
 model_index.json
 stable_audio_light.png
+model.ckpt
