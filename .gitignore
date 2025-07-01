@@ -1,2 +1,14 @@
 .env
 __pycache__
+projection_model
+scheduler
+text_encoder
+tokenizer
+transformer
+vae
+fma_dataset_attribution2.csv
+freesound_dataset_attribution2.csv
+LICENSE.md
+model_config.json
+model.safetensors
+stable_audio_light.png
