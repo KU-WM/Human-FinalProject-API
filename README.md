@@ -18,8 +18,16 @@
 - [📄 License](#-license)
  
 ## 📝 소개
-<img src="https://github.com/user-attachments/assets/7fa99942-a334-4033-bf96-b919ff1f4d43" />
-Gemini API를 이용하여 간편하게 원하는 이미지를 생성하고 Stable-Audio 1.0 모델을 활용하여 간단한 효과음을 생성할 수 있는 사이트의 ApiServer (Audio) 코드 입니다.
+<img src="https://github.com/user-attachments/assets/85cc6a6d-3c04-41d2-b8ea-1ad42b39f49a" width="775px" />
+
+Gemini API와 Stable-Audio 1.0 모델을 활용하여 **사용자가 간단한 텍스트 입력만으로 원하는 이미지와 간단한 효과음을 생성할 수 있는 사이트**를 풀스택으로 개발하고 서비스 하였습니다. 이 레포지토리는 해당 서비스의 ApiServer (Audio) 코드 입니다.<br>
+[https://lnpra.com](https://lnpra.com) 에 접속하시면 해당 서비스를 사용하실 수 있습니다.<br>
+
+프로젝트의 유지보수를 위하여 개인 프로젝트를 아래 3개의 레포지토리로 분리하여 저장하였습니다.<br>
+
+[FrontEnd](https://github.com/KU-WM/Human-FinalProject-Front)<br>
+[BackEnd](https://github.com/KU-WM/Human-FinalProject-Back.git)<br>
+[Api Server](https://github.com/KU-WM/Human-FinalProject-API.git) - 현재 페이지<br>
 
 ## 📘 사용법
 
