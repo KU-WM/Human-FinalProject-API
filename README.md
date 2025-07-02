@@ -7,15 +7,21 @@
 ![huggingface](https://img.shields.io/badge/huggingface-FFD21E.svg?style=for-the-badge&logo=huggingface&logoColor=green)
 ![Nginx](https://img.shields.io/badge/nginx-009639?style=for-the-badge&logo=nginx&logoColor=white)
 
+## 📌 목차
+- [📝 소개](#-소개)
+- [📘 사용법](#-사용법)
+- [🎯 제작 목적](#-제작-목적)
+- [🛠 개발 과정](#-개발-과정)
+- [📁 전체 프로젝트 구성 트리](#-전체-프로젝트-구성-트리)
+- [🧰 사용 기술 스택](#-사용-기술-스택)
+- [📚 Reference](#-reference)
+- [📄 License](#-license)
  
-## 소개
+## 📝 소개
 <img src="https://github.com/user-attachments/assets/7fa99942-a334-4033-bf96-b919ff1f4d43" />
 Gemini API를 이용하여 간편하게 원하는 이미지를 생성하고 Stable-Audio 1.0 모델을 활용하여 간단한 효과음을 생성할 수 있는 사이트의 ApiServer (Audio) 코드 입니다.
 
-## 제작 목적
-쉽게 접근 가능하고 불편함 없이 간단한 설명만으로 원하는 이미지와 그에 어울리는 효과음을 생성할 수 있는 서비스를 제공하기 위해 제작하였습니다.
-
-## 사용방법
+## 📘 사용법
 
 1) 모델 다운로드
 https://huggingface.co/stabilityai/stable-audio-open-1.0 에 접속 후 모델 승인 받기 / 파일 전부 다운로드
@@ -68,26 +74,45 @@ python test.py
 ```
 단 test.py의 경로로 cd를 통해 이동하거나 test.py의 경로를 모두 포함하여 사용해야 함
 
-## 전체 프로젝트 구성
-[FrontEnd]<br>
-https://github.com/KU-WM/Human-FinalProject-Front<br>
-[BackEnd]<br>
-https://github.com/KU-WM/Human-FinalProject-Back<br>
-[Api Server] - 현재 페이지<br>
-https://github.com/KU-WM/Human-FinalProject-API<br>
-[내부망 구성]<br>
-nginx - 리버스 프록시 적용<br>
-[외부 서비스 배포]<br>
-cloudflare tunnel - localhost와 외부 도메인 연결<br>
+## 🎯 제작 목적
+ 기존 ai 이미지 생성시 유료 서비스 이거나, 모델 / LoRA / 파라미터 / 프롬프트 등 복잡한 입력이 필요 한 경우가 많습니다. 효과음 생성의 경우는 찾는것 부터가 힘든 경우도 있습니다.<br>
+이 기능들을 쉽게 접근 가능하고 불편함 없이 간단한 설명만으로 원하는 이미지와 그에 어울리는 효과음을 생성할 수 있는 서비스를 제공하기 위해 제작하였습니다.
 
-## 개발 과정
-- 2025.05.26 ~ 2025.06.26 (약 5주) 의 기간동안 진행
-- 오전/오후의 스크럼 회의를 통해 진행사항을 점검하고, 애자일 방법론을 통하여 유연한 개발을 진행
+## 🛠 개발 과정
+- 2025.05.26 ~ 2025.06.26 (약 5주) 의 기간동안 진행하였습니다.
+- 오전/오후의 스크럼 회의를 통해 진행사항을 점검하고, 애자일 방법론을 통하여 유연한 개발을 진행하였습니다.
 
-## Reference
+## 📁 전체 프로젝트 구성 트리
+```
+📦Human-FinalProject-API
+ ┣ 📂projection_model
+ ┣ 📂scheduler
+ ┣ 📂text_encoder
+ ┣ 📂tokenizer
+ ┣ 📂transformer
+ ┣ 📂vae
+ ┣ 📂__pycache__
+ ┣ 📜.gitignore
+ ┣ 📜fma_dataset_attribution2.csv
+ ┣ 📜freesound_dataset_attribution2.csv
+ ┣ 📜LICENSE.md
+ ┣ 📜model.ckpt
+ ┣ 📜model.safetensors
+ ┣ 📜model_config.json
+ ┣ 📜model_index.json
+ ┣ 📜README.md
+ ┣ 📜requirements.txt
+ ┣ 📜stable_audio_light.png
+ ┗ 📜test.py
+```
+huggyface의 stable-audio 1.0을 받은 뒤 git과 같은 경로로 합친 경우의 트리입니다.
+
+## 📚 Reference
 - https://github.com/Stability-AI/stable-audio-tools.git
-    - Stable-Audio 전용 라이브러리.
+    - Stable-Audio 전용 라이브러리 stable-audio-tools의 깃허브.
+- https://stableaudio.com/user-guide/prompt-structure
+    - Stable-Audio 공식 문서 / 프롬프트 예시
 
-## License
+## 📄 License
 본 프로젝트의 코드는 비상업적 용도로 자유롭게 사용하실 수 있습니다.
 상업적 이용이나 수정, 재배포 시에는 사전 연락을 부탁드립니다.
